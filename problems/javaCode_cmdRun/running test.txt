@@ -1,0 +1,15 @@
+File  description are as follows 
+the algorithm in the file named- UnixCommand.java
+test cases – UnixCommandTest.java
+testcase runner file- TestRunner.java
+
+
+In order to compile the java files, run the command; 
+javac -cp  "junit.jar;hamcrest-core-1.3.jar;." TestRunner.java
+
+
+In order to  run the command in the file: 
+java -cp  "junit.jar;hamcrest-core-1.3.jar;." TestRunner	
+
+
+the desired output which we get currently is All Test Case Passed true;
