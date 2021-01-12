@@ -24,7 +24,11 @@ def simplify(B,A):
 
 
     i=0
-    if(A[0]=='/'):
+    j=0;
+    if(A[0]==' '):
+        while(A[j]==' '):
+            j+=1
+    if(A[j]=='/'):
         st=[]
     while i < len_A:
       dir_str = ""
@@ -36,7 +40,7 @@ def simplify(B,A):
       if dir_str == "..":
          if len(st):
             st.pop()
-      elif dir_str == '.' or dir_str== ' ':
+      elif dir_str == '.' or dir_str==' 'or dir_str=="":
              continue
       elif dir_str.isalnum()!= True:
           return A+" :no such directory"
@@ -70,7 +74,7 @@ print(simplify("/abc/def","../..")+'\n')
 print(simplify("/abc/def","../../..")+'\n')
 print(simplify("/abc/def",".")+'\n')
 print(simplify("/abc/def","..klm")+'\n')
-print(simplify("/abc/def","///// ")+'\n')
+print(simplify("/abc/def"," ///// ")+'\n')
 print(simplify("/abc/def","/a/b/.....")+'\n')
 print(simplify("/abc/def","/%/^/a")+'\n')
 
