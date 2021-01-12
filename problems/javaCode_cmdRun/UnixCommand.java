@@ -15,7 +15,9 @@ public class UnixCommand {
             }
             if(sb.length()!=0) location.push(sb.toString());
         }
-        if(command.charAt(0)=='/') location.clear();
+        int j=0;
+        while(command.charAt(j)==' ') j++;
+        if(command.charAt(j)=='/') location.clear();
 
         for(int i=0;i<command.length();i++){
             StringBuilder sb= new StringBuilder();
