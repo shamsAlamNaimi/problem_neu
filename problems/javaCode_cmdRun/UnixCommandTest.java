@@ -4,6 +4,7 @@ import org.junit.Test;
 
 public class UnixCommandTest {
 
+	@Test
 	public void testExecuteCommand() {
 		UnixCommand uc= new UnixCommand();
 		String output= uc.executeCommand("/", "abc");
@@ -70,7 +71,7 @@ public class UnixCommandTest {
 	@Test
 	public void testMultipleSlash() {
 		UnixCommand uc= new UnixCommand();
-		String output= uc.executeCommand("/abc/def", "////// ");
+		String output= uc.executeCommand("/abc/def", " //////");
 		assertEquals("/",output);
 	}
 	
@@ -113,5 +114,6 @@ public class UnixCommandTest {
 	
 	
 	}
+
 
 
